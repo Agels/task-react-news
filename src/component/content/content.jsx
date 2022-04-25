@@ -2,14 +2,13 @@
 
 import React from "react";
 import Cardx from "./Card";
-import Search from "../navbar/navbar";
+import Search from "../Search/search";
 import { Spin, Result } from "antd";
 export default class Content extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       news: [],
-      search: "",
       loading: false,
     };
   }
@@ -60,7 +59,7 @@ export default class Content extends React.Component {
         ) : news.length !== 0 ? (
           <Cardx news={news} />
         ) : (
-          <Result status="warning" title="data gak ada bos." />
+          <Result status="warning" title="Data tidak ditemukan." />
         )}
 
         {console.log("this render")}
