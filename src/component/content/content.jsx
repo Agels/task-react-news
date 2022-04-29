@@ -52,6 +52,7 @@ export default class Content extends React.Component {
     const { loading, news } = this.state;
     return (
       <div>
+       
         <Search onChangeSearch={this.search} />
 
         {loading ? (
